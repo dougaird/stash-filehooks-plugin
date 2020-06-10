@@ -94,7 +94,7 @@ public class FileNameHook implements PreRepositoryHook<RepositoryHookRequest>, S
                                          .collect(toList());
         }
         
-        ArrayList<String> resultList = new ArrayList();
+        ArrayList<String> resultList = new ArrayList<>();
         boolean hookPassed = true;
 
         if(filteredPaths.size() > 0) {
@@ -112,7 +112,7 @@ public class FileNameHook implements PreRepositoryHook<RepositoryHookRequest>, S
         if(hookPassed){
             return RepositoryHookResult.accepted();
         } else {
-            return RepositoryHookResult.rejected("file does not match name pattern", Arrays.toString(resultList.toArray()));
+            return RepositoryHookResult.rejected("File does not match name pattern", Arrays.toString(resultList.toArray()));
         }
     
     }
@@ -140,7 +140,7 @@ public class FileNameHook implements PreRepositoryHook<RepositoryHookRequest>, S
 
         if(!Strings.isNullOrEmpty(settings.getString(SETTINGS_EXCLUDE_PATTERN))) {
             try {
-                Pattern.compile(settings.getString(SETTINGS_EXCLUDE_PATTERN, ""));
+                Pattern.compile(settings.getString(SETTINGS_EXCLUDE_PATTERN));
             } catch(PatternSyntaxException e){
                 errors.addFieldError(SETTINGS_EXCLUDE_PATTERN, i18n.getText("filename-hook.error.pattern", "Pattern is not a valid regular expression"));
             }
@@ -148,7 +148,7 @@ public class FileNameHook implements PreRepositoryHook<RepositoryHookRequest>, S
 
         if(!Strings.isNullOrEmpty(settings.getString(SETTINGS_BRANCHES_PATTERN))) {
             try {
-                Pattern.compile(settings.getString(SETTINGS_BRANCHES_PATTERN, ""));
+                Pattern.compile(settings.getString(SETTINGS_BRANCHES_PATTERN));
             } catch(PatternSyntaxException e){
                 errors.addFieldError(SETTINGS_BRANCHES_PATTERN, i18n.getText("filename-hook.error.pattern", "Pattern is not a valid regular expression"));
             }
