@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.christiangalsterer</groupId>
 
-    <artifactId>bitbucket-filehooks-plugin</artifactId>
+    <artifactId>stash-filehooks-plugin</artifactId>
     <version>4.0</version>
 
 <!--    <artifactId>stash-filehooks-plugin</artifactId>
