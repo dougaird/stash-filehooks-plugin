@@ -44,7 +44,7 @@
     <validator>org.christiangalsterer.stash.filehooks.plugin.hook.FileSizeHookValidator</validator>
   </repository-hook>
 
-  <!--
+  
   <repository-hook key="filename-hook" name="File Name Hook" i18n-name-key="filename-hook.name" class="org.christiangalsterer.stash.filehooks.plugin.hook.FileNameHook">
     <description key="filename-hook.description">Reject commits that contain files matching a regular expression for file and/or path name.</description>
     <icon>images/filename.png</icon>
@@ -57,6 +57,6 @@
       <directory location="/static/"/>
     </config-form>
   </repository-hook>
-  -->
+  
 
 </atlassian-plugin>

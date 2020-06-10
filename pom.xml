@@ -4,10 +4,7 @@
     <groupId>org.christiangalsterer</groupId>
 
     <artifactId>stash-filehooks-plugin</artifactId>
-    <version>4.01</version>
-
-<!--    <artifactId>stash-filehooks-plugin</artifactId>
-    <version>3.3.3-SNAPSHOT</version> -->
+    <version>4.02</version>
 
     <organization>
         <name>Christian Galsterer</name>

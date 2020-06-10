@@ -137,7 +137,6 @@ public class FileSizeHook implements PreRepositoryHook<RepositoryHookRequest> {
             pathAndSizes.put(maxFileSize, violatingPaths);
         }
 
-        RepositoryHookResult result;
         ArrayList<String> resultList = new ArrayList<>();
         boolean hookPassed = true;
 

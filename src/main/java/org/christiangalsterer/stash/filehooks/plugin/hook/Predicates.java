@@ -28,6 +28,11 @@ class Predicates {
     static final Predicate<Change> isNotDeleteChange = change -> !change.getType().equals(ChangeType.DELETE);
 
     /**
+     * Predicate to check that a change is a delete operation.
+     */
+    static final Predicate<Change> isDeleteChange = change -> change.getType().equals(ChangeType.DELETE);
+
+    /**
      * Predicate to check if the RefChange is matched by the @param branchesPattern
      */
     static Predicate<RefChange> matchesBranchPattern (final Pattern branchesPattern) {
